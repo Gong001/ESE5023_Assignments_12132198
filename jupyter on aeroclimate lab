@@ -1,0 +1,15 @@
+access jupyter in the login node
+
+ssh -L 8888:localhost:8888 ggong@aeroclimate.ucmerced.edu
+conda activate ggong
+jupyter lab --no-browser --ip=127.0.0.1 --port=8888
+
+
+access jupyter in the compute node
+
+ssh ggong@aeroclimate.ucmerced.edu
+srun --pty -p compute -t 02:00:00 -c 4 --mem=16G /bin/bash
+ssh -J ggong@aeroclimate.ucmerced.edu -L 8000:localhost:8888 ggong@node01
+conda activate ggong    
+jupyter lab --no-browser --ip=127.0.0.1 --port=8888
+http://localhost:8000/lab?token=...
