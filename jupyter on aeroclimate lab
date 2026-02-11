@@ -8,7 +8,7 @@ jupyter lab --no-browser --ip=127.0.0.1 --port=8888
 Access jupyter in the compute node
 
 ssh ggong@aeroclimate.ucmerced.edu
-srun --pty -p compute -t 02:00:00 -c 4 --mem=16G /bin/bash
+srun --pty -p compute -t 12:00:00 -c 4 --mem=128G /bin/bash
 conda activate ggong
 jupyter lab --no-browser --ip=127.0.0.1 --port=8888
 
