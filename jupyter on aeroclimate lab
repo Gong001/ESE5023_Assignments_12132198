@@ -15,3 +15,6 @@ jupyter lab --no-browser --ip=127.0.0.1 --port=8888
 In another terminal
 ssh -J ggong@aeroclimate.ucmerced.edu -L 8000:localhost:8888 ggong@node01
 http://localhost:8000/lab?token=...
+
+
+codex --ask-for-approval never
